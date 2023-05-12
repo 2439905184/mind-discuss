@@ -16,6 +16,11 @@
             color: white;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> 
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> 
 </head>
 <body>
     <h2>宗旨</h2>
@@ -50,5 +55,19 @@
     <div>
         <h5><a href="">所有讨论帖</a></h5>
     </div>
+    <div id="gitalk-container"></div>
+    <script>
+    const gitalk = new Gitalk({
+        clientID: '5c1d77b83d82c75dd565',
+        clientSecret: '14562b662810812f44bfad63ce2d520c52d46df1',
+        repo: 'https://github.com/2439905184/mind-discuss',
+        owner: '2439905184',
+        admin: ['2439905184'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+       
+      gitalk.render('gitalk-container')
+      </script>
 </body>
 </html>
