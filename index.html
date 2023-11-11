@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>谈天论地小论坛</title>
+    <title>城市论坛</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -12,9 +12,48 @@
     <style>
         .main-title
         {
-            background-image: linear-gradient(blue, white);
+            /* background-image: linear-gradient(blue, white); */
+            background-color: black;
             color: white;
         }
+        .main-title > a
+        {
+            /* background-image: linear-gradient(blue, white); */
+            color: white;
+        }
+        .boxbar {
+            background: #98e;
+        }
+        .boxbar {
+            position: relative;
+            zoom: 100%;
+            }
+        .boxbar {
+            padding-left: .5em;
+            line-height: 2em;
+            }
+            .box-outer {
+    border: 1px solid;
+    zoom: 100%;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+}
+    .boxcontent ul
+    {
+        list-style: none;
+        padding-left: 0;
+    }
+    .boxcontent 
+    {
+    /* text-align: center; */
+    }
+    #boards .column {
+    text-align: left;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    padding-left: 1cm;
+}
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> 
@@ -25,12 +64,95 @@
 <body>
     <!-- 仿4chan样式 -->
     <!-- 封面自己写代码，实际的帖子直接用论坛系统的代码 -->
-    <h2>宗旨</h2>
-    <p>当主站运营不下去的时候，自由复制网站所有数据和代码，开多个网站去中心化副本模式运行</p>
-    <p>联系qq：2439905184@qq.com</p>
-
     <!-- 使用图书馆分类法进行论坛分类 -->
-
+    <h4 align="center">城市论坛</h4>
+    <!-- A 马克思主义、列宁主义、毛泽东思想、邓小平理论
+B 哲学、宗教
+C 社会科学总论
+D 政治、法律
+E 军事
+F 经济
+G 文化、科学、教育、体育
+H 语言、文字
+I 文学
+J 艺术
+K 历史、地理
+N 自然科学总论
+O 数理科学和化学
+P 天文学、地球科学
+Q 生物科学
+R 医药、卫生
+S 农业科学
+T 工业技术
+U 交通运输
+V 航空、航天
+X 环境科学、劳动保护科学（安全科学）
+Z 综合性图书
+简表 -->
+    <div class="box-outer top-box" id="boards">
+        <div class="box-inner">
+        <div class="boxbar">
+        <h2>板块</h2>
+        <!-- <div id="filter-btn" data-cmd="filter">filter ▼</div> -->
+        </div>
+        <div class="boxcontent">
+        <div class="column">
+        <h3 style="text-decoration: underline; display: inline;">哲学、宗教组</h3>
+        <ul>
+        <li><a href="" class="boardlink">佛教</a></li>
+        <li><a href="" class="boardlink">基督教</a></li>
+        <li><a href="" class="boardlink">伊斯兰教</a></li>
+        <li><a href="" class="boardlink">道教</a></li>
+        <li><a href="" class="boardlink">神道教</a></li>
+        </ul>
+        <h3 style="text-decoration: underline; display: inline;">科学组</h3>
+        <ul>
+        <li><a href="/v/" class="boardlink">专业科学讨论</a></li>
+        <li><a href="/vg/" class="boardlink">民间科学</a></li>
+        </ul>
+        </div>
+        <div class="column">
+        <h3 style="text-decoration: underline; display: inline;">文艺讨论</h3>
+        <ul>
+        <li><a href="/co/" class="boardlink">漫画</a></li>
+        <li><a href="/g/" class="boardlink">动画</a></li>
+        <li><a href="/tv/" class="boardlink">科幻</a></li>
+        <li><a href="/k/" class="boardlink">奇幻</a></li>
+        <li><a href="/o/" class="boardlink">魔幻</a></li>
+        <li><a href="/an/" class="boardlink">大众文化</a></li>
+        <li><a href="/tg/" class="boardlink">市井文化</a></li>
+        </ul>
+        </div>
+        <div class="column">
+        <h3 style="text-decoration: underline; display: inline;">奇闻异事组</h3>
+        <ul>
+        <li><a href="/po/" class="boardlink">灵异讨论</a></li>
+        <li><a href="/p/" class="boardlink">超自然人物讨论</a></li>
+        <li><a href="/p/" class="boardlink">趣味新闻</a></li>
+        </ul>
+        </div>
+        <div class="column">
+            <h3 style="text-decoration: underline; display: inline;">学生组</h3>
+            <ul>
+            <li><a href="/biz/" class="boardlink">小学</a></li>
+            <li><a href="/trv/" class="boardlink">中学</a></li>
+            <li><a href="/fit/" class="boardlink">大学</a></li>
+            </ul>
+            </div>
+        <div class="column">
+        <h3 style="text-decoration: underline; display: inline;">其他</h3>
+        <ul>
+        <li><a href="/biz/" class="boardlink">美食讨论</a></li>
+        <li><a href="/trv/" class="boardlink">饮料讨论</a></li>
+        <li><a href="/fit/" class="boardlink">去哪玩</a></li>
+        <li><a href="/fit/" class="boardlink">农业讨论</a></li>
+        </ul>
+        </div>
+        <br class="clear-bug">
+        </div>
+        </div>
+        </div>
+        <hr/>
     <p>处于运营考虑，目前使用半手工，半gittalk（自动）的方式进行记录。已收录的资料库，请在线查阅或者下载之后手动查阅</p>
     <a href="https://github.com/2439905184/mind-discuss">资料库</a>
     <!-- 利用linux本地建站 -->
@@ -71,6 +193,11 @@
     <a href="https://www.4channel.org/">4 channel</a>
     
     <div id="gitalk-container"></div>
+
+    <h5>宗旨</h5>
+    <p>当主站运营不下去的时候，自由复制网站所有数据和代码，开多个网站去中心化副本模式运行</p>
+    <p>联系qq：2439905184@qq.com</p>
+
     <script>
     const gitalk = new Gitalk({
         clientID: '5c1d77b83d82c75dd565',
